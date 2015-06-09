@@ -4,6 +4,7 @@ package ir.dset.hptextviewsample;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
@@ -30,6 +31,7 @@ public class HPTextView extends TextView {
     private void init(AttributeSet attributeSet, int defStyle) {
         final TypedArray typedArray = getContext().obtainStyledAttributes(attributeSet, R.styleable.HPTextView, defStyle, 0);
         amazingCharColor = typedArray.getColor(R.styleable.HPTextView_amazingcolor, amazingCharColor);
+        fontName = typedArray.getString(R.styleable.HPTextView_font);
         typedArray.recycle();
 
         boolean[] buffer = new boolean[this.getText().length()];
@@ -56,6 +58,11 @@ public class HPTextView extends TextView {
         }
         builder.append(spannableString);
         this.setText(builder, BufferType.SPANNABLE);
+
+        if (fontName != null) {
+            Typeface typeFace = Typeface.createFromAsset(getContext().getAssets(), fontName);
+            setTypeface(typeFace);
+        }
     }
 
 
@@ -67,6 +74,13 @@ public class HPTextView extends TextView {
         this.amazingCharColor = amazingCharColor;
     }
 
-    private int amazingCharColor = Color.RED;
+    public String getFontName() {
+        return fontName;
+    }
+    public void setFontName(String fontName) {
+        this.fontName = fontName;
+    }
 
+    private int amazingCharColor = Color.RED;
+    private String fontName = null;
 }

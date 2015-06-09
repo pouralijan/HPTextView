@@ -23,4 +23,26 @@
         app:amazingcolor="#00f"
         />
 
+    <ir.dset.hptextviewsample.HPTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hassan Pouralijan"
+        android:textSize="70sp"
+        app:font="fonts/hp.ttf"
+        android:textColor="#ee991122"
+
+
+        />
+
+    <ir.dset.hptextviewsample.HPTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سلام ایران ..."
+        android:textSize="90sp"
+        app:font="fonts/BAraz.ttf"
+        android:textColor="#ee119922"
+
+
+        />
+
 </LinearLayout>
