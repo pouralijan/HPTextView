@@ -1,13 +1,26 @@
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
     <ir.dset.hptextviewsample.HPTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="حَسَن پورعلیجان"
+        android:textSize="40sp"
 
         />
 
-</RelativeLayout>
+    <ir.dset.hptextviewsample.HPTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="بِسْمِ اللهِ الرَّحْمَنِ الرَّحيمِ"
+        android:textSize="40sp"
+        app:amazingcolor="#00f"
+        />
+
+</LinearLayout>
